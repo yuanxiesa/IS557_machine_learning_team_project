@@ -1,4 +1,4 @@
-# IS577 MLTP
+# IS557 MLTP
 This repository holds my code for IS557 Applied Machine Learning: Team Project
 
 # Unsupervised learning individual project
