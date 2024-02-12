@@ -22,17 +22,22 @@ def test_feature_selection(data_dict):
     from sklearn.metrics import confusion_matrix
     from sklearn.svm import LinearSVC
     from sklearn.metrics import ConfusionMatrixDisplay
-    est = LinearSVC(random_state=35)
+    from sklearn.metrics import balanced_accuracy_score
+    from sklearn.metrics import cohen_kappa_score
+
+    clf = LinearSVC(random_state=35)
     for key, value in data_dict.items():
         X_train, y_train, X_test, y_test = value
-        est.fit(X_train, y_train)
-        y_pred = est.predict(X_test)
+        clf.fit(X_train, y_train)
+        y_pred = clf.predict(X_test)
         cm = confusion_matrix(y_true=y_test, y_pred=y_pred)
-        print(key)
-        disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=est.classes_)
+        score_ba = round(balanced_accuracy_score(y_true=y_test, y_pred=y_pred), 4)
+        score_cohen = round(cohen_kappa_score(y1=y_test, y2=y_pred), 4)
+        title_str = f'{key.upper()}\nBalanced Accuracy: {score_ba}\nCohen Kappa: {score_cohen}'
+        disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=clf.classes_)
         disp.plot()
-        plt.title(key.upper())
-        plt.xticks(rotation=45, ha='right')
+        plt.title(title_str)
+        plt.xticks(rotation=45)
         plt.show()
 
 
