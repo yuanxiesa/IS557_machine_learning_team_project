@@ -4,7 +4,7 @@ This repository holds my code for IS557 Applied Machine Learning: Team Project
 ## Final project causal ML
 This folder holds my code for the final team project: "Does marriage affect mental health for Americans?" In this project, my teammate and I used the General Social Survey (GSS) dataset and causal ML techniques (Doubly Robust (DR) Estimator with machine learning-based propensity score (PS) models) to estimate the causal effect of marriage on mental health for the Americans. We obtained robust conclusion across six different experiment configuations that marriage **positively** influences mental health. 
 
-Final report: https://github.com/yuanxiesa/IS557_machine_learning_team_project/blob/main/final_project_causal_ml/Does%20marriage%20affect%20mental%20health%20for%20Americans%20--%20final%20report.pdf
+[Final report](https://github.com/yuanxiesa/IS557_machine_learning_team_project/blob/main/final_project_causal_ml/Does%20marriage%20affect%20mental%20health%20for%20Americans%20--%20final%20report.pdf)
 
 ## Unsupervised learning
 This folder holds my code for the first preliminary individual project. I use unsupervize learning to discover clusters among tweets from 16 Twitter (now X :)) account (Karami,Amir. (2018). Health News in Twitter. UCI Machine Learning Repository. [https://doi.org/10.24432/C5BW2Q](https://doi.org/10.24432/C5BW2Q). 
